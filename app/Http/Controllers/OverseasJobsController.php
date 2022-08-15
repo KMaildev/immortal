@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Models\Activities;
-use App\Models\Models\CarrerAdvice;
 use App\Models\Models\Country;
+use App\Models\Models\OverseasJobs;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class OverseasJobsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +15,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $countries = Country::all();
-        $carrer_advices = CarrerAdvice::all();
-        $activities = Activities::all();
-        return view('welcome', compact('countries', 'carrer_advices', 'activities'));
+        //
     }
 
     /**
@@ -51,7 +47,9 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        //
+        $country = Country::findOrFail($id);
+        $jobs = OverseasJobs::get()->where('countrie_id', $id);
+        return view('overseas_job.show', compact('country', 'jobs'));
     }
 
     /**

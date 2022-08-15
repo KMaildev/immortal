@@ -2,7 +2,7 @@
 @section('title', ' - Contact Us')
 @section('content')
 
-    <div class="contact-wrapper pt-100">
+    <div class="contact-wrapper pt-100" style="background-color: #5DB64B;">
         <div class="container">
             <div class="row">
 
@@ -12,26 +12,28 @@
                         <ul>
                             <li>
                                 <h6>Let’s Talk</h6>
-                                <a
-                                    href="https://demo.egenslab.com/cdn-cgi/l/email-protection#8ae3e4ece5caeff2ebe7fae6efa4e9e5e7"><span
-                                        class="__cf_email__"
-                                        data-cfemail="4920272f26092c31282439252c672a2624">[email&#160;protected]</span></a>
-                                <a
-                                    href="https://demo.egenslab.com/cdn-cgi/l/email-protection#177e79717857726f767a677b723974787a"><span
-                                        class="__cf_email__"
-                                        data-cfemail="cfa6a1a9a08faab7aea2bfa3aae1aca0a2">[email&#160;protected]</span></a>
-                                <a href="tel:8801761111456">+88 0176 1111 456</a>
+                                <a href="mailto:admin@immortalfriendscompany.com">
+                                    admin@immortalfriendscompany.com
+                                </a>
+                                <a href="mailto:info@immortalfriendscompany.com">
+                                    info@immortalfriendscompany.com
+                                </a>
+                                <br>
+                                <a href="tel:09123123123">
+                                    09123123123
+                                </a>
                             </li>
                             <li>
                                 <h6>Loacation.</h6>
-                                <a href="#">168/170, Ave 01, Streets Suite 666 Mirpur DOHS, Bangladesh</a>
+                                <a href="#">Yangon, Myanmar</a>
                             </li>
                             <li>
                                 <h6>Visit Us.</h6>
-                                <a href="#">Facebook: https://www.facebook.com/egenslab</a>
-                                <a href="#">Twitter: https://www.twitter.com/egenslab</a>
+                                <a href="#">Facebook: https://www.facebook.com/</a>
+                                <a href="#">Twitter: https://www.twitter.com/</a>
                             </li>
                         </ul>
+                        <br>
                     </div>
                 </div>
 

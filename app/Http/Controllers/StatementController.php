@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Models\Activities;
-use App\Models\Models\CarrerAdvice;
-use App\Models\Models\Country;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class StatementController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $countries = Country::all();
-        $carrer_advices = CarrerAdvice::all();
-        $activities = Activities::all();
-        return view('welcome', compact('countries', 'carrer_advices', 'activities'));
+        return view('statement.index');
     }
 
     /**

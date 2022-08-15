@@ -5,23 +5,15 @@
                 <div class="topbar-contact-left">
                     <ul class="contact-list">
                         <li>
-                            <i class="bi bi-telephone-fill"></i>
-                            <a href="tel:+17632275032">+1 763-227-5032</a>
-                        </li>
-                        <li>
-                            <i class="bi bi-envelope-fill"></i>
-
-                        </li>
-
-                        <li>
-                            <a href="{{ route('set_eng') }}" class="nav-link">
-                                ENG
+                            <a href="tel:091231231">
+                                <i class="bi bi-telephone-fill"></i>
+                                091231231
                             </a>
                         </li>
-
                         <li>
-                            <a href="{{ route('set_jp') }}" class="nav-link">
-                                JP
+                            <a href="mailto:info@immortalfriendscompany.com">
+                                <i class="bi bi-envelope-fill"></i>
+                                info@immortalfriendscompany.com
                             </a>
                         </li>
                     </ul>
@@ -29,7 +21,7 @@
             </div>
             <div class="col-xl-5 col-lg-6 col-md-6 text-xl-center text-md-start text-center">
                 <div class="topbar-ad">
-                    <a href="#">Black Friday Big Offer</a>
+                    <a href="{{ route('home') }}">Immortal Friends Company Limited</a>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 d-md-flex  d-none align-items-center justify-content-end">
@@ -38,7 +30,17 @@
                     <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
                     <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
                     <li><a href="#"><i class="bx bxl-whatsapp-square"></i></a></li>
-                    <li><a href="#"><i class='bx bxl-pinterest'></i></a></li>
+
+                    <a href="{{ route('set_eng') }}">
+                        <img src="{{ asset('data/us.gif') }}" alt=""
+                            style="width: 50px; height: auto; padding: 2px;">
+                    </a>
+
+                    <a href="{{ route('set_jp') }}">
+                        <img src="{{ asset('data/jp.jpeg') }}" alt=""
+                            style="width: 43px; height: auto; padding: 2px;">
+                    </a>
+
                 </ul>
             </div>
         </div>
@@ -71,8 +73,8 @@
                     <nav class="main-nav">
 
                         <div class="inner-logo d-xl-none text-center">
-                            <a href="#">
-                                <img src="assets/images/logo.png" alt="">
+                            <a href="{{ route('home') }}">
+                                <img src="{{ asset('data/logo.jpg') }}" alt="" style="width: 100px;">
                             </a>
                         </div>
 
@@ -90,32 +92,26 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ route('about.index') }}">
                                             About Us
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ route('md.index') }}">
                                             MD'S Message
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ route('statement.index') }}">
                                             Vision / Mission / Values
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ route('team.index') }}">
                                             Meet Our Team
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            Our Partners
                                         </a>
                                     </li>
                                 </ul>
@@ -129,17 +125,17 @@
                                 <i class="fl flaticon-plus">+</i>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ route('country.index') }}">
                                             Overseas Jobs
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="{{ route('recruitment_services.index') }}">
                                             Our Recruitment Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="{{ route('carrer_advice.index') }}">
                                             Career Advice
                                         </a>
                                     </li>

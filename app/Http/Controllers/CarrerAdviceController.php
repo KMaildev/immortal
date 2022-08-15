@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Models\Activities;
 use App\Models\Models\CarrerAdvice;
-use App\Models\Models\Country;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+use function Ramsey\Uuid\v1;
+
+class CarrerAdviceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +16,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $countries = Country::all();
         $carrer_advices = CarrerAdvice::all();
-        $activities = Activities::all();
-        return view('welcome', compact('countries', 'carrer_advices', 'activities'));
+        return view('carrer_advice.index', compact('carrer_advices'));
     }
 
     /**
@@ -51,7 +49,9 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        //
+        $carrer_advice = CarrerAdvice::findOrFail($id);
+        $recent_carrer_advices = CarrerAdvice::all();
+        return view('carrer_advice.show', compact('carrer_advice', 'recent_carrer_advices'));
     }
 
     /**

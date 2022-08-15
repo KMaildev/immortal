@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>Immortal Friends Company @yield('title')</title>
+    <title>Immortal Friends Company Limited @yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset('assets/images/favicon.png') }}" type="image/gif" sizes="20x20">
@@ -40,17 +40,37 @@
 
     <div class="footer-area">
         <div class="footer-main-wrapper">
-            <div class="footer-vactor">
-                <img src="{{ asset('assets/images/banner/footer-bg.png') }}" alt="">
-            </div>
             <div class="container">
-                <div class="row justify-content-center g-4">
-                    <div class="col-lg-4">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title text-center">
+                                Career Advice
+                            </h4>
+                            <div class="footer-gallary-grid">
+                                @foreach ($footer_carrer_advices as $key => $footer_carrer_advice)
+                                    @if ($key == 6)
+                                        @php
+                                            break;
+                                        @endphp
+                                    @endif
+                                    <div class="footer-gallary-item">
+                                        <a href="{{ route('carrer_advice.show', $footer_carrer_advice->id) }}"
+                                            data-fancybox="footer" data-caption="">
+                                            <img src="{{ $footer_carrer_advice->photo }}" alt=""
+                                                style="width: 100%; height: 100px; background-size: center; object-fit: cover;">
+                                            <p style="font-size: 12px;">
+                                                {{ $footer_carrer_advice->title_eng ?? '' }}
+                                            </p>
+                                        </a>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+
                         <div class="footer-about text-lg-start text-center">
-                            <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus.
-                                Suspendissendt molestie turpis nec lacinia vehicula.</p>
                             <div class="footer-social-wrap">
-                                <h5>Follow Us On:</h5>
                                 <ul class="footer-social-links justify-content-lg-start justify-content-center">
                                     <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
                                     <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
@@ -61,80 +81,104 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-4">
+
+                    <div class="col-lg-3 col-md-3">
                         <div class="footer-widget">
                             <h4 class="footer-widget-title">Quick Link</h4>
                             <ul class="footer-links">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="package.html">Tour Package</a></li>
-                                <li><a href="destination.html">Destination</a></li>
-                                <li><a href="guide.html">Tour Guide</a></li>
-                                <li><a href="package-details.html">Booking Process</a></li>
-                                <li><a href="blog.html">Blog</a></li>
+                                <li>
+                                    <a href="{{ route('about.index') }}">
+                                        About Us
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ route('md.index') }}">
+                                        MD'S Message
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ route('statement.index') }}">
+                                        Vision / Mission / Values
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ route('team.index') }}">
+                                        Meet Our Team
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ route('country.index') }}">
+                                        Overseas Jobs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('recruitment_services.index') }}">
+                                        Our Recruitment Services
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ route('activities.index') }}">
+                                        Activities
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ route('contact.index') }}">
+                                        Contact Us
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-4">
+
+                    <div class="col-lg-3 col-md-3">
                         <div class="footer-widget">
-                            <h4 class="footer-widget-title">Tour Type</h4>
+                            <h4 class="footer-widget-title">
+                                Application
+                            </h4>
                             <ul class="footer-links">
-                                <li><a href="#">Wild & Adventure Tours</a></li>
-                                <li><a href="#">Group Tour</a></li>
-                                <li><a href="#">Seasonal Tours</a></li>
-                                <li><a href="#">Relaxation Tours</a></li>
-                                <li><a href="#">Family Friendly Tours</a></li>
+                                <li>
+                                    <a href="{{ route('cv.index') }}">
+                                        Submit CV
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('employer.index') }}">
+                                        Employer Form
+                                    </a>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-8">
-                        <div class="footer-widget">
-                            <h4 class="footer-widget-title text-center">Gallery</h4>
-                            <div class="footer-gallary-grid">
-                                <div class="footer-gallary-item">
-                                    <a href="{{ asset('assets/images/gallary/fg-1.png') }}" data-fancybox="footer"
-                                        data-caption="Caption Here"><img
-                                            src="{{ asset('assets/images/gallary/fg-1.png') }}" alt=""></a>
-                                </div>
-                                <div class="footer-gallary-item">
-                                    <a href="{{ asset('assets/images/gallary/fg-2.png') }}" data-fancybox="footer"
-                                        data-caption="Caption Here"><img
-                                            src="{{ asset('assets/images/gallary/fg-2.png') }}" alt=""></a>
-                                </div>
-                                <div class="footer-gallary-item">
-                                    <a href="{{ asset('assets/images/gallary/fg-3.png') }}" data-fancybox="footer"
-                                        data-caption="Caption Here"><img
-                                            src="{{ asset('assets/images/gallary/fg-3.png') }}" alt=""></a>
-                                </div>
-                                <div class="footer-gallary-item">
-                                    <a href="{{ asset('assets/images/gallary/fg-4.png') }}" data-fancybox="footer"
-                                        data-caption="Caption Here"><img
-                                            src="{{ asset('assets/images/gallary/fg-4.png') }}" alt=""></a>
-                                </div>
-                                <div class="footer-gallary-item">
-                                    <a href="{{ asset('assets/images/gallary/fg-5.png') }}" data-fancybox="footer"
-                                        data-caption="Caption Here"><img
-                                            src="{{ asset('assets/images/gallary/fg-5.png') }}" alt=""></a>
-                                </div>
-                                <div class="footer-gallary-item">
-                                    <a href="{{ asset('assets/images/gallary/fg-6.png') }}" data-fancybox="footer"
-                                        data-caption="Caption Here"><img
-                                            src="{{ asset('assets/images/gallary/fg-6.png') }}" alt=""></a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="footer-contact-wrapper">
                     <h5>Contact Us:</h5>
                     <ul class="footer-contact-list">
-                        <li><i class="bi bi-telephone-x"></i> <a href="tel:+17632275032">+1 763-227-5032</a></li>
-                        <li><i class="bi bi-envelope-open"></i> <a
-                                href="https://demo.egenslab.com/cdn-cgi/l/email-protection#01686f676e41756e74737971736e2f626e6c"><span
-                                    class="__cf_email__"
-                                    data-cfemail="cda4a3aba28db9a2b8bfb5bdbfa2e3aea2a0">[email&#160;protected]</span></a>
+                        <li>
+                            <i class="bi bi-telephone-x"></i>
+                            <a href="tel:09123123123">
+                                09123123123
+                            </a>
                         </li>
-                        <li><i class="bi bi-geo-alt"></i> <a href="#">2752 Willison Street Eagan, United
-                                State</a></li>
+                        <li>
+                            <i class="bi bi-envelope-open"></i>
+                            <a href="mailto:info@immortalfriendscompany">
+                                info@immortalfriendscompany
+                            </a>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt"></i>
+                            <a href="#">
+                                Yangon, Myanmar
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -142,23 +186,9 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-4 col-md-6 order-lg-1 order-3 ">
+                    <div class="col-lg-12 col-md-12 order-lg-1 order-3 ">
                         <div class="copyright-link text-lg-start text-center">
-                            <p>Copyright 2021 TourXPro | Design By <a href="#"> Egens Lab</a></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4  order-lg-2 order-1">
-                        <div class="footer-logo text-center">
-                            <a href="index.html"><img src="{{ asset('assets/images/logo-w.png') }}"
-                                    alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 order-lg-3 order-2">
-                        <div class="policy-links">
-                            <ul class="policy-list justify-content-lg-end justify-content-center">
-                                <li><a href="#">Terms & Condition</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
+                            <p>Copyright {{ now()->year }} Immortal Friends Company Limited</p>
                         </div>
                     </div>
                 </div>

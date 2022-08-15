@@ -8,7 +8,7 @@
                     <div class="tour-package-details">
                         <div class="pd-header">
                             <div class="pd-thumb">
-                                <img src="assets/images/package/pd-thumb.png" alt="">
+                                <img src="{{ asset('data/japan.jpeg') }}" alt="">
                             </div>
                             <div class="header-bottom">
                                 <div class="pd-lavel d-flex justify-content-between align-items-center flex-wrap gap-2">
@@ -16,13 +16,6 @@
                                         <i class="bi bi-geo-alt"></i>
                                         Yangon, Myanmar
                                     </h5>
-                                    <ul class="d-flex align-items-center rating">
-                                        <li><i class="bi bi-star-fill"></i></li>
-                                        <li><i class="bi bi-star-fill"></i></li>
-                                        <li><i class="bi bi-star-fill"></i></li>
-                                        <li><i class="bi bi-star-fill"></i></li>
-                                        <li><i class="bi bi-star-fill"></i></li>
-                                    </ul>
                                 </div>
                                 <h2 class="pd-title">
                                     Japanese Language
@@ -191,8 +184,8 @@
                                 </h4>
                             </div>
                             <div class="widget-body">
-                                <form autocomplete="off" method="POST" action="{{ route('student_application_form.store') }}"
-                                    id="create-form">
+                                <form autocomplete="off" method="POST"
+                                    action="{{ route('student_application_form.store') }}" id="create-form">
                                     @csrf
 
                                     <div class="form-group mb-3">

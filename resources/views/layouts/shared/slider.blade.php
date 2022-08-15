@@ -11,19 +11,19 @@
         <div class="swiper hero-slider-three ">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="slider-bg-1">
+                    <div class="slider-bg-1" style="background-image: url({{ asset('data/slider/1.jpeg') }})">
                         <div class="container">
                             <div class="row d-flex justify-content-center align-items-center">
                                 <div class="col-lg-8">
                                     <div class="hero3-content">
-                                        <span class="title-top">Wellcome To TuorX Pro</span>
-                                        <h1>Journey to Explore World</h1>
-                                        <p>Nulla facilisi. Maecenas ac tellus ut ligula interdum convallis. Nullam
-                                            dapibus on erat in dolor posuere, none hendrerit lectus ornare.
-                                            Suspendisse sit amet turpina sagittis, ultrices dui et, aliquam urna.
+                                        <h1>Immortal Friends Company</h1>
+                                        <p>
+                                            Overseas Employment Agency <br>
+                                            Immortal Friends Company was established in 1990
                                         </p>
-                                        <a href="#" class="button-fill-primary banner3-btn">Book Your
-                                            Travel</a>
+                                        <a href="{{ route('contact.index') }}" class="button-fill-primary banner3-btn">
+                                            Contact Us
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -32,19 +32,19 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="slider-bg-3">
+                    <div class="slider-bg-3" style="background-image: url({{ asset('data/slider/2.jpeg') }})">
                         <div class="container">
                             <div class="row d-flex justify-content-center align-items-center">
                                 <div class="col-lg-8">
                                     <div class="hero3-content">
-                                        <span class="title-top">Wellcome To TuorX Pro</span>
-                                        <h1>Enjoy Your New Adventure</h1>
-                                        <p>Nulla facilisi. Maecenas ac tellus ut ligula interdum convallis. Nullam
-                                            dapibus on erat in dolor posuere, none hendrerit lectus ornare.
-                                            Suspendisse sit amet turpina sagittis, ultrices dui et, aliquam urna.
+                                        <h1>Immortal Friends Company</h1>
+                                        <p>
+                                            Overseas Employment Agency <br>
+                                            Immortal Friends Company was established in 1990
                                         </p>
-                                        <a href="#" class="button-fill-primary banner3-btn">Book Your
-                                            Travel</a>
+                                        <a href="{{ route('cv.index') }}" class="button-fill-primary banner3-btn">
+                                            Submit CV
+                                        </a>
                                     </div>
                                 </div>
                             </div>
